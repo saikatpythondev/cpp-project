@@ -1,0 +1,145 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+class lib{
+    public:
+    int n=4;
+    string book[50];
+    int id[50];
+    string student[40];
+    int roll[40];
+    int m;
+    int o;
+    string student1[5];
+    string roll1[5];
+    string book1[5];
+    string id1[5];
+    void set_s_i(){
+         cout<<"enter the number of student register in library"<<endl;
+        cin>>m;
+        for(int i=1;i<=m;i++)
+        {
+            cout<<"enter student name"<<endl;
+            cin>>student[i];
+            cout<<"enter book his/her roll_no"<<endl;
+        cin>>roll[i];
+           
+        }
+     
+    }
+   
+    void book_set(){
+       
+        cout<<"enter the number of book for library"<<endl;
+        cin>>n;
+        for(int i=1;i<=n;i++)
+        {
+            cout<<"enter book name"<<endl;
+            cin>>book[i];
+            cout<<"enter book isbn_no"<<endl;
+        cin>>id[i];
+           
+        }
+    }
+    void get_book_info(){
+        cout<<"*******"<<endl;
+        for(int i=1;i<=n;i++){
+           
+            cout<<"book name"<<"                               "<<"isbn no"<<endl;
+           
+            cout<<book[i]<<"                                        "<<id[i]<<endl;
+           
+        }
+        cout<<"********"<<endl;
+       
+    }
+    void get()
+    {
+         cout<<"*******"<<endl;
+        for(int i=1;i<=m;i++){
+           
+            cout<<"student name"<<"                               "<<"roll no"<<endl;
+           
+            cout<<student[i]<<"                                        "<<roll[i]<<endl;
+           
+        }
+        cout<<"********"<<endl;
+    }
+    void set_lib_details(){
+         cout<<"enter the number of issue of book for student in library"<<endl;
+        cin>>o;
+        for(int i=1;i<=o;i++)
+        {
+            cout<<"enter student name"<<endl;
+            cin>>student1[i];
+            cout<<"enter  his/her roll_no"<<endl;
+        cin>>roll1[i];
+        cout<<"enter book name"<<endl;
+        cin>>book1[i];
+        cout<<"enter isbn no"<<endl;
+        cin>>id1[i];
+           
+        }
+       
+       
+    }
+    void abc(){
+        cout<<"*******"<<endl;
+          cout<<"book name"<<"    "<<"isbn no"<<"student"<<"     "<<"roll"<<endl;
+        for(int i=1;i<=o;i++){
+           
+         
+           
+            cout<<book1[i]<<"  "<<id1[i]<<"  "<<student1[i]<<"  "<<roll1[i]<<endl;
+           
+        }
+        cout<<"********"<<endl;
+    }
+};
+
+int main()
+{
+    lib iitkgp;
+    int choice;
+    while(1){
+       
+   
+    cout<<"......................................."<<endl;
+    cout<<"1)set reg students name and roll "<<endl;
+    cout<<"2)set books name and isbn_no "<<endl;
+    cout<<"3)get book info "<<endl;
+    cout<<"4)get registered student info"<<endl;
+    cout<<"5)set lib details "<<endl;
+    cout<<"6)get lib details"<<endl;
+    cout<<" ....................................."<<endl;
+    cout<<"which option you wanna select"<<endl;
+    cin>>choice;
+    if(choice==1)
+    {
+        iitkgp.set_s_i();
+    }
+    else if(choice==2){
+        iitkgp.book_set();
+    }
+    else if(choice==3){
+        iitkgp.get_book_info();
+       
+    }
+    else if(choice==4){
+        iitkgp.get();
+    }
+    else if(choice==5){
+        iitkgp.set_lib_details();
+    }
+    else if(choice==6){
+        iitkgp.abc();
+       
+    }
+    else{
+        cout<<"wrong input"<<endl;
+        cout<<"programming by saikat(geophysics dept)"<<endl;
+    }
+    }
+   
+    return 0;
+}
